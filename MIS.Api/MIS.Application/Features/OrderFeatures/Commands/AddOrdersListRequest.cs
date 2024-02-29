@@ -1,0 +1,19 @@
+﻿using MediatR;
+using MIS.Application.Models.Requests;
+using MIS.Application.Models.Responses;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MIS.Application.Features.OrderFeatures.Commands
+{
+    public class AddOrdersListRequest : IRequest<MessageResponse>
+    {
+        public List<AcceptedRequest> AcceptedRequests { get; set; }
+        public List<InStockRequest> InStockRequests { get; set; }
+
+        public List<RejectedRequest> RejectedRequests { get; set; }
+    }
+}
